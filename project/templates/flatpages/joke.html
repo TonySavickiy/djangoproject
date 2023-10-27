@@ -1,0 +1,31 @@
+{% extends "flatpages/default.html" %}
+{% load static %}
+
+{% comment %} Заголовок {% endcomment %}
+{% block title %}
+{{flatpage.title}}
+{% endblock title%}
+
+
+{% comment %} Главная надпись по середине {% endcomment %}
+{% block main_row %}
+Прикольчик
+{% endblock main_row %}
+
+{% comment %} Надпись поменьше по середине {% endcomment %}
+{% block small_row %}
+Необходимый по заданию повторяющийся два раза контент. Увеличенный + курсив:<big><i>{{flatpage.content}}</i><big>
+{% endblock small_row %}
+{% block onemore_row %}
+Необходимый по заданию повторяющийся два раза контент. Уменьшенный + жирный<small><b>:{{flatpage.content}}</b></small>
+{% endblock onemore_row %}
+
+
+
+{% block fst_img %}Мистер бин{% endblock fst_img %}
+{% block fst_img_src %}<img src="{% static 'assets/img/joke2.png' %}" class="img-fluid mb-3 mb-lg-0"  alt="..." />{% endblock fst_img_src %}
+{% block fst_img_disc %}В теле Шрэка на тёмном фоне{% endblock fst_img_disc %}
+{% block sec_img %}Смешной демотиватор{% endblock sec_img %}
+{% block sec_img_src %}<img class="img-fluid" src="{% static 'assets/img/joke3.jpg' %}" alt="..." />{% endblock sec_img_src %}
+{% block sec_img_disc %}На зелёном фоне{% endblock sec_img_disc %}
+

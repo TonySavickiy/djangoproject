@@ -1,0 +1,29 @@
+{% extends "flatpages/default.html" %}
+{% load static %}
+
+{% comment %} Заголовок {% endcomment %}
+{% block title %}
+{{flatpage.title}}
+{% endblock title%}
+
+
+{% comment %} Главная надпись по середине {% endcomment %}
+{% block main_row %}
+Итоговый проект
+{% endblock main_row %}
+
+{% comment %} Надпись поменьше по середине {% endcomment %}
+{% block small_row %}
+<small>Необходимый по заданию повторяющийся два раза контент. 1-й раз:</small>{{flatpage.content}}
+{% endblock small_row %}
+{% block onemore_row %}
+<small>Необходимый по заданию повторяющийся два раза контент. 2-й раз:</small>{{flatpage.content}}
+{% endblock onemore_row %}
+
+
+{% block fst_img %}Описание крутости шаблона{% endblock fst_img %}
+{% block fst_img_src %}<img src="{% static 'assets/img/bg-masthead.jpg' %}" class="img-fluid mb-3 mb-lg-0"  alt="..." />{% endblock fst_img_src %}
+{% block fst_img_disc %}Очень крутой шаблон, бла бла бла.{% endblock fst_img_disc %}
+{% block sec_img %}Ещё одно описание{% endblock sec_img %}
+{% block sec_img_src %}<img class="img-fluid" src="{% static 'assets/img/demo-image-01.jpg' %}" alt="..." />{% endblock sec_img_src %}
+{% block sec_img_disc %}Просто невероятный шаблон, смотрите какие картинки.{% endblock sec_img_disc %}
